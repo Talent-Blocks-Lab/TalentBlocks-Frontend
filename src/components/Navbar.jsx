@@ -37,12 +37,9 @@ const menuItems = [
 
 const Navbar = () => {
   return (
-    <nav className="fixed z-40 bg-black bg-opacity-70 flex items-center justify-between h-[90px] w-full mb-[162px] px-[120px] py-[40px] text-white">
+    <nav className="fixed z-40 bg-grey bg-opacity-70 flex items-center justify-between h-[90px] w-full mb-[162px] px-[120px] py-[40px] text-white">
       <Logo
-        img="/src/assets/logo.svg"
-        color="text-white"
-        fontSize="text-2xl"
-        fontWeight="font-[700]"
+        img="/src/assets/full-logo-orange.png"
       />
 
       <div className="flex items-center gap-[30px]">

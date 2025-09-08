@@ -31,7 +31,7 @@ const WhyUs = () => {
   return (
     <section className="bg-neutral-blue flex flex-col justify-center items-center px-[120px] py-[70px]">
       <h2 className="text-4xl font-[600] text-black text-center">
-        Why choose TalentsBlocks
+        Why choose TalentBlocks Labs
       </h2>
       <p className="mb-[70px] text-base font-[400] leading-[25px] text-center w-[956px] text-[#555]">
         Lorem ipsum dolor sit amet consectetur. Amet sociis tincidunt feugiat

@@ -6,7 +6,7 @@ const cardsData = [
     title: "UI/UX Design",
     subjects: ["Figma", "Wireframing", "Prototype", "User Research"],
     description:
-      "At TalentsBlocks, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
+      "At TalentBlocks Labs, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
     type: "Physical class",
     duration: "12 weeks",
     btn: "Learn More",
@@ -17,7 +17,7 @@ const cardsData = [
     title: "Frontend Development",
     subjects: ["HTML", "CSS", "JavaScript", "React"],
     description:
-      "At TalentsBlocks, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
+      "At TalentBlocks Labs, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
     type: "Physical class",
     duration: "12 weeks",
     btn: "Learn More",
@@ -28,7 +28,7 @@ const cardsData = [
     title: "Backend Development",
     subjects: ["Node.js", "Express", "Databases", "API"],
     description:
-      "At TalentsBlocks, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
+      "At TalentBlocks Labs, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
     type: "Physical class",
     duration: "12 weeks",
     btn: "Learn More",
@@ -39,7 +39,7 @@ const cardsData = [
     title: "Full Stack Development",
     subjects: ["Frontend", "Backend", "Database", "DevOps"],
     description:
-      "At TalentsBlocks, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
+      "At TalentBlocks Labs, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
     type: "Physical class",
     duration: "12 weeks",
     route: "/fullstack",
