@@ -44,13 +44,10 @@ const Footer = () => {
       </div>
       <div className="flex items-center justify-between mt-[70px]">
         <Logo
-          img={"/src/assets/navbarLogo.svg"}
-          color={"text-black"}
-          fontSize={"text-[24px]"}
-          fontWeight={"font-[700]"}
+          img={"/src/assets/full-logo-blue.png"}
         />
         <p className="text-base font-normal text-[#6B6975]">
-          Copyright ©_{currentYear} TalentsBlocks
+          Copyright ©_{currentYear} TalentBlocks Labs
         </p>
         <div className="flex gap-3">
           {socialLinks.map((item, i) => (
