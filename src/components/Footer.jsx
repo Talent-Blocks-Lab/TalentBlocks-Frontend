@@ -16,7 +16,7 @@ const Footer = () => {
   const currentYear = date.getFullYear();
 
   return (
-    <section id="contacts" className="bg-[#E8EAEC] px-[121px] py-14">
+    <section id="contacts" className="bg-[#E8EAEC] px-4 md:px-16 lg:px-[120px] py-14">
       <div className="flex gap-80">
         <div className="flex-col">
           <h4 className="text-black text-[32px] font-bold">Join With Us</h4>
@@ -44,7 +44,7 @@ const Footer = () => {
       </div>
       <div className="flex items-center justify-between mt-[70px]">
         <Logo
-          width={250}
+          width={150}
           height={60}
           img={"/src/assets/full-logo-orange.png"}
         />
