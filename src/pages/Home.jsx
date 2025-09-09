@@ -13,17 +13,17 @@ import {
 
 function Home() {
   return (
-    <>
+    <main className="max-w-full">
       <Hero />
-      <About />
+      {/* <About />
       <Explore />
       <CTAcontent />
       <WhyUs />
       <Testimonials />
       <FAQs />
       <CTAsection />
-      <Footer/>
-    </>
+      <Footer/> */}
+    </main>
   );
 }
 

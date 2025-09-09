@@ -44,7 +44,9 @@ const Footer = () => {
       </div>
       <div className="flex items-center justify-between mt-[70px]">
         <Logo
-          img={"/src/assets/full-logo-blue.png"}
+          width={250}
+          height={60}
+          img={"/src/assets/full-logo-orange.png"}
         />
         <p className="text-base font-normal text-[#6B6975]">
           Copyright ©_{currentYear} TalentBlocks Labs
