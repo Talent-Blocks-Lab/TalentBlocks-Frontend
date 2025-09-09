@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 const Logo = ({ img, width, height }) => {
   return (
     <Link href="/">
-        <img src={`${img}`} alt="TalentBlocks Labs logo" width={width} height={height} />
+      <div className="items-center gap-3 flex mr-20">
+        <img src={`${img}`} alt="Talent Blocks Lab logo" width={width} height={height} />
+      </div>
     </Link>
   );
 };

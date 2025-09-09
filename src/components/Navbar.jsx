@@ -46,12 +46,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed z-40 bg-black bg-opacity-70 flex items-center justify-between h-[90px] w-full mb-[162px] py-[40px] lg:px-20 text-white">
-        <Logo
-          width={250}
-          height={0}
-          img="/src/assets/full-logo-blue.png"
-        />
+      <nav className="fixed z-40 bg-black bg-opacity-70 flex items-center justify-between h-[90px] w-full mb-[162px] py-[40px] px-4 md:px-16 lg:px-[120px] text-white">
+        <Logo width={150} height={30} img="/src/assets/full-logo-blue.png" />
 
         {/* Menu Items */}
         <div className="flex items-center gap-[30px]">
@@ -67,10 +63,9 @@ const Navbar = () => {
               // Other menu items - show only on lg and up
               return (
                 <div key={index} className="hidden md:block">
-                  <Link 
-                    to={item.route || ""} 
-                    className="text-white text-base font-[500] leading-relaxed"
-                  >
+                  <Link
+                    to={item.route || ""}
+                    className="text-white text-base font-[500] leading-relaxed">
                     {item.title}
                   </Link>
                 </div>
@@ -83,31 +78,32 @@ const Navbar = () => {
         <div className="flex items-center gap-[15px] lg:gap-[30px]">
           {/* Programs dropdown for md and below - positioned close to menu button */}
           <div className="hidden sm:inline-flex md:hidden">
-            <Dropdown item={menuItems.find(item => item.children)} />
+            <Dropdown item={menuItems.find((item) => item.children)} />
           </div>
 
           {/* Contacts - lg and up only */}
           <Link
             className="hidden md:block text-white text-base font-medium leading-none"
-            to="#contacts"
-          >
+            to="#contacts">
             Contacts
           </Link>
 
           {/* Get Started - sm and up */}
           <Link
             className="hidden sm:inline-flex w-[120px] lg:w-[164px] h-[40px] lg:h-[50px] text-base px-4 lg:px-8 py-2 lg:py-4 bg-blue-500 rounded justify-center items-center"
-            to="/available-courses"
-          >
+            to="/available-courses">
             Get Started
           </Link>
 
           {/* Mobile Menu Button - md and below */}
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden w-[40px] h-[40px] flex items-center justify-center"
-          >
-            {isMobileMenuOpen ? <IoMdClose size={24} /> : <IoMdMenu size={24} />}
+            className="md:hidden w-[40px] h-[40px] flex items-center justify-center">
+            {isMobileMenuOpen ? (
+              <IoMdClose size={24} />
+            ) : (
+              <IoMdMenu size={24} />
+            )}
           </button>
         </div>
       </nav>
@@ -120,8 +116,7 @@ const Navbar = () => {
               <h2 className="text-xl font-semibold text-gray-800">Menu</h2>
               <button
                 onClick={toggleMobileMenu}
-                className="p-2 rounded-full hover:bg-gray-100"
-              >
+                className="p-2 rounded-full hover:bg-gray-100">
                 <IoMdClose size={24} className="text-gray-600" />
               </button>
             </div>
@@ -135,8 +130,7 @@ const Navbar = () => {
                     <Link
                       to={item.route || ""}
                       onClick={toggleMobileMenu}
-                      className="block text-gray-800 text-base font-medium py-2 hover:text-blue-500"
-                    >
+                      className="block text-gray-800 text-base font-medium py-2 hover:text-blue-500">
                       {item.title}
                     </Link>
                   )}
@@ -147,15 +141,13 @@ const Navbar = () => {
                 <Link
                   to="#contacts"
                   onClick={toggleMobileMenu}
-                  className="block text-gray-800 text-base font-medium py-2 hover:text-blue-500"
-                >
+                  className="block text-gray-800 text-base font-medium py-2 hover:text-blue-500">
                   Contacts
                 </Link>
                 <Link
                   to="/available-courses"
                   onClick={toggleMobileMenu}
-                  className="block w-full text-center px-6 py-3 bg-blue-500 text-white rounded font-medium hover:bg-blue-600"
-                >
+                  className="block w-full text-center px-6 py-3 bg-blue-500 text-white rounded font-medium hover:bg-blue-600">
                   Get started
                 </Link>
               </div>
@@ -179,14 +171,16 @@ const MobileDropdown = ({ item, onClose }) => {
     <div>
       <button
         onClick={toggle}
-        className="flex items-center justify-between w-full text-gray-800 text-base font-medium py-2 hover:text-blue-500"
-      >
-        <span>{item.title.replace(' ⌵', '')}</span>
-        <span className={`transform transition-transform ${isOpen ? 'rotate-180' : ''}`}>
+        className="flex items-center justify-between w-full text-gray-800 text-base font-medium py-2 hover:text-blue-500">
+        <span>{item.title.replace(" ⌵", "")}</span>
+        <span
+          className={`transform transition-transform ${
+            isOpen ? "rotate-180" : ""
+          }`}>
           ⌵
         </span>
       </button>
-      
+
       {isOpen && (
         <div className="ml-4 mt-2 space-y-2">
           {menuItems.map((childItem) => (
@@ -194,8 +188,7 @@ const MobileDropdown = ({ item, onClose }) => {
               key={childItem.route}
               to={childItem?.route || ""}
               onClick={onClose}
-              className="block text-gray-600 text-sm font-medium py-2 hover:text-blue-500"
-            >
+              className="block text-gray-600 text-sm font-medium py-2 hover:text-blue-500">
               {childItem.title}
             </Link>
           ))}

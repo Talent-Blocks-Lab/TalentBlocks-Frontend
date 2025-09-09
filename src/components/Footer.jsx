@@ -49,7 +49,7 @@ const Footer = () => {
           img={"/src/assets/full-logo-orange.png"}
         />
         <p className="text-base font-normal text-[#6B6975]">
-          Copyright ©_{currentYear} TalentBlocks Labs
+          Copyright ©_{currentYear} TalentBlocks Lab
         </p>
         <div className="flex gap-3">
           {socialLinks.map((item, i) => (
