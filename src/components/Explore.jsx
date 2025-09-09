@@ -3,91 +3,94 @@ import uiImage from "../assets/ui.svg"; // Replace require with import
 
 const cardsData = [
   {
-    title: "UI/UX Design",
-    subjects: ["Figma", "Wireframing", "Prototype", "User Research"],
+    title: "UI/UX Design Course",
+    subjects: ["Figma", "Wireframing", "Prototype", "User Research", "Product"],
     description:
       "At TalentBlocks Lab, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
     type: "Physical class",
-    duration: "12 weeks",
+    duration: "8 weeks",
     btn: "Learn More",
     route: "/ui-ux",
     img: uiImage,
   },
   {
-    title: "Frontend Development",
-    subjects: ["HTML", "CSS", "JavaScript", "React"],
+    title: "Web2 Basics Course",
+    subjects: ["Internet","HTTP", "HTML", "CSS", "JavaScript", "Git & Github"],
     description:
       "At TalentBlocks Lab, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
     type: "Physical class",
-    duration: "12 weeks",
+    duration: "16 weeks",
     btn: "Learn More",
-    route: "/frontend",
+    route: "/web2-basics",
     img: uiImage,
   },
   {
-    title: "Backend Development",
-    subjects: ["Node.js", "Express", "Databases", "API"],
+    title: "Web2 Advance Course",
+    subjects: ["ReactJs", "Node.js", "Databases", "API", "TypeScript"],
     description:
       "At TalentBlocks Lab, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
     type: "Physical class",
-    duration: "12 weeks",
+    duration: "16 weeks",
     btn: "Learn More",
-    route: "/backend",
+    route: "/web2-advance",
     img: uiImage,
   },
   {
-    title: "Full Stack Development",
-    subjects: ["Frontend", "Backend", "Database", "DevOps"],
+    title: "Blockchain & Solidity Course",
+    subjects: ["Solidity", "Web3 Frontend", "Hardhat", "Foundry", "IPFS"],
     description:
       "At TalentBlocks Lab, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
     type: "Physical class",
-    duration: "12 weeks",
-    route: "/fullstack",
+    duration: "16 weeks",
+    route: "/solidity-course",
     img: uiImage,
   },
 ];
 
 const Explore = () => {
   return (
-    <section className="flex flex-col bg-white px-[173px] pt-[60px] pb-[128px] text-center">
-      <div className="flex flex-col items-center justify-center">
-        <h2 className="w-[655px] text-4xl text-black font-[600] mb-[16px]">
+    <section className="flex flex-col bg-white px-8 md:px-2 xl:px-[173px] pt-[60px] pb-20 text-center">
+      <div className="flex flex-col items-center justify-center mb-[70px]">
+        <h2 className="md:w-[655px] text-3xl lg:text-4xl text-black font-[600] mb-[16px]">
           Explore the courses we offer
         </h2>
-        <p className="w-[956px] text-[#555] text-center mb-[70px] text-base">
+        <p className="md:w-[576px] lg:w-[956px] text-[#555] text-center text-base">
           Lorem ipsum dolor sit amet consectetur. Amet sociis tincidunt feugiat
           nisl dui malesuada pulvinar convallis. Mauris ac est pretium eleifend
           mattis bibendum sed adipiscing natoque.
         </p>
       </div>
 
-      <div className="flex gap-[60px] items-center justify-center">
+      <div className="flex ml-2 md:pl-8 gap-2 md:gap-11 lg:gap-10 items-center justify-center">
         <div className="flex flex-col justify-center items-center">
           {[1, 2, 3, 4].map((number, index) => (
             <div key={index}>
               <div
-                className={`flex text-[28px] font-[500] ${
+                className={`flex text-sm sm:text-[28px] font-[500] ${
                   index === 0 || index === 3 ? "text-black" : "text-grey"
-                } justify-center items-center w-[38px] h-[38px] mb-1 border-solid border-2 border-grey`}>
+                } justify-center items-center w-5 sm:w-[38px] h-5 sm:h-[38px] mb-1 border-solid border-[1px] border-grey`}>
                 {number}
               </div>
               {index < 3 && (
-                <div className="w-0.5 h-[292px] bg-grey mb-1"></div>
+                <>
+                  <div className="hidden md:block w-0.5 h-[332px] bg-grey mb-1 ml-5"></div>
+                  <div className="md:hidden w-[1px] h-[635px] bg-grey mb-1 ml-2 sm:ml-5"></div>
+                </>
               )}
             </div>
           ))}
         </div>
 
-        <div className="flex-col space-y-10">
+        <div className="flex-col space-y-10 ml-1 mr-6 md:mr-0">
           {cardsData.map((card, i) => (
             <div
               key={i}
-              className="flex w-[1020px] h-[310px] pl-[24px] gap-[32px] rounded-sm shadow border-solid opacity-[0.6] hover:opacity-[1] cursor-pointer">
-              <div className="flex flex-col my-[24px]">
-                <h3 className="text-left text-3xl text-black font-[600]">
+              className="flex flex-col md:flex-row w-full h-auto pr-4 sm:pr-0 xl:pl-6 md:gap-[32px] rounded-sm shadow border-solid opacity-[0.6] hover:opacity-[1] cursor-pointer">
+              <div className="flex flex-col my-2 xl:my-6 sm:w-full">
+                <h3 className="text-left text-sm xl:text-3xl text-black font-[600] mb-2">
                   {card.title}
                 </h3>
-                <div className="flex gap-x-2 text-center text-[10px] font-[600] mb-4">
+                <div className="flex gap-x-1 md:gap-x-2 text-center text-[8px] sm:text-[10px] font-[600] mb-4">
                   {card.subjects.map((subject, idx) => (
                     <p
                       key={idx}
@@ -96,6 +99,7 @@ const Explore = () => {
                     </p>
                   ))}
                 </div>
+                <img src={card.img} alt={card.title} className="w-full h-full md:hidden" />
                 <p className="text-left mb-[38px] leading-[25px]">
                   {card.description}
                 </p>
@@ -132,7 +136,7 @@ const Explore = () => {
                   </div>
                 </div>
               </div>
-              <img src={card.img} alt={card.title} width={384} height={310} />
+              <img src={card.img} alt={card.title} className="w-full h-full hidden md:block" />
             </div>
           ))}
         </div>
