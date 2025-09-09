@@ -4,16 +4,16 @@ import { Navbar } from "./index";
 const Hero = () => {
   return (
     <header className="bg-[url('/src/assets/hero.jpg')] bg-center bg-no-repeat bg-cover">
-      <div className="pb-[252px] bg-black bg-opacity-70 flex-col justify-start gap-[162px]">
+      <div className="pb-10 bg-black bg-opacity-70 flex-col justify-start gap-[162px]">
         <Navbar />
-        <div className="mx-[110px] pt-[162px] flex-col justify-center text-white">
-          <h1 className="text-center text-8xl font-[600] ">
-            Empowering Tomorrow's <span className="text-primary">Tech</span>{" "}
+        <div className="mx-4 sm:mx-14 md:mx-16 lg:mx-[110px] pt-[162px] flex-col justify-center text-white">
+          <h1 className="text-center text-3xl md:text-[50px] lg:text-8xl font-[600]">
+            Empowering Tomorrow's <span className="text-primary">Web3</span>{" "}
             Leaders Today
           </h1>
-          <p className="text-center pt-[30px] text-sm mb-[77px]">
+          <p className="text-center pt-[30px] text-xs lg:text-sm mb-[77px]">
             Dive into a World of Limitless Possibilities—Where Expertise Meets
-            Ambition, and Every Skill Unlocks a New Door.
+            Ambition, and Every Skill Unlocks a New Door in Web3 Space.
           </p>
         </div>
         <div className="flex justify-center items-center">
@@ -23,7 +23,7 @@ const Hero = () => {
             Get Started
           </Link>
 
-          <div>
+          <div className="hidden sm:block">
             <p className="w-[93px] origin-top-left rotate-6 text-center text-lime-400 text-base font-normal font-longcang leading-[13.78px]">
               All skills start from here
             </p>

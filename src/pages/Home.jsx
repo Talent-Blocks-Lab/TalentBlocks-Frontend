@@ -13,7 +13,7 @@ import {
 
 function Home() {
   return (
-    <main className="max-w-full">
+    <main className="max-container overflow-x-hidden">
       <Hero />
       <About />
       <Explore />

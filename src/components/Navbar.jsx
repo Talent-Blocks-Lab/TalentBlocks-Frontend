@@ -46,21 +46,21 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed z-40 bg-black bg-opacity-70 flex items-center justify-between h-[90px] w-full mb-[162px] py-[40px] px-4 md:px-16 lg:px-[120px] text-white">
+      <nav className="fixed z-40 bg-black bg-opacity-70 flex items-center justify-between h-[90px] mb-[162px] w-full py-[40px] px-8 md:px-2 lg:px-16 xl:px-[120px] text-white">
         <Logo width={150} height={30} img="/src/assets/full-logo-blue.png" />
 
         {/* Menu Items */}
         <div className="flex items-center gap-[30px]">
           {menuItems.map((item, index) => {
             if (item.children) {
-              // Programs dropdown - show on lg and up
+              // Programs dropdown - show on md and up
               return (
                 <div key={index} className="hidden md:block">
                   <Dropdown item={item} />
                 </div>
               );
             } else {
-              // Other menu items - show only on lg and up
+              // Other menu items - show only on md and up
               return (
                 <div key={index} className="hidden md:block">
                   <Link
@@ -75,13 +75,13 @@ const Navbar = () => {
         </div>
 
         {/* Right Section */}
-        <div className="flex items-center gap-[15px] lg:gap-[30px]">
+        <div className="flex items-center gap-2 lg:gap-[15px] xl:gap-[30px]">
           {/* Programs dropdown for md and below - positioned close to menu button */}
           <div className="hidden sm:inline-flex md:hidden">
             <Dropdown item={menuItems.find((item) => item.children)} />
           </div>
 
-          {/* Contacts - lg and up only */}
+          {/* Contacts - xl and up only */}
           <Link
             className="hidden md:block text-white text-base font-medium leading-none"
             to="#contacts">
@@ -90,7 +90,7 @@ const Navbar = () => {
 
           {/* Get Started - sm and up */}
           <Link
-            className="hidden sm:inline-flex w-[120px] lg:w-[164px] h-[40px] lg:h-[50px] text-base px-4 lg:px-8 py-2 lg:py-4 bg-blue-500 rounded justify-center items-center"
+            className="hidden sm:inline-flex w-[120px] xl:w-[164px] h-[40px] xl:h-[50px] text-base px-4 xl:px-8 py-2 xl:py-4 bg-blue-500 rounded justify-center items-center"
             to="/available-courses">
             Get Started
           </Link>
@@ -111,7 +111,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-50 md:hidden">
-          <div className="fixed top-0 right-0 h-full w-80 bg-white shadow-lg">
+          <div className="fixed top-0 right-0 h-full w-80 bg-white shadow-xl">
             <div className="flex items-center justify-between p-6 border-b">
               <h2 className="text-xl font-semibold text-gray-800">Menu</h2>
               <button
