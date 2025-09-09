@@ -12,24 +12,24 @@ const menuItems = [
     title: "Programs ⌵",
     children: [
       {
-        title: "UI/UX Design",
+        title: "UI/UX Design Course",
         route: "/product-design",
       },
       {
-        title: "Frontend Development",
-        route: "/frontend-dev",
+        title: "Web2 Basics Course",
+        route: "/web2-basics",
       },
       {
-        title: "Backend Development",
-        route: "/backend-dev",
+        title: "Web2 Advance Course",
+        route: "/web2-advance",
       },
       {
-        title: "Fullstack Development",
-        route: "/fullstack-dev",
+        title: "Blockchain & Solidity Course",
+        route: "/solidity-course",
       },
       {
-        title: "Web3, Blockchain & Crypto Bootcamp",
-        route: "/web3-blockchain",
+        title: "Non-Technical Programs (online)",
+        route: "/non-technical",
       },
     ],
   },
@@ -46,7 +46,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed z-40 bg-black bg-opacity-70 flex items-center justify-between h-[90px] mb-[162px] w-full py-[40px] px-8 md:px-2 lg:px-16 xl:px-[120px] text-white">
+      <nav className="fixed z-40 bg-black bg-opacity-70 flex items-center justify-between h-[90px] mb-[162px] w-full py-[40px] px-4 md:px-2 lg:px-16 xl:px-[120px] text-white">
         <Logo width={150} height={30} img="/src/assets/full-logo-blue.png" />
 
         {/* Menu Items */}
@@ -111,9 +111,8 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-50 md:hidden">
-          <div className="fixed top-0 right-0 h-full w-80 bg-white shadow-xl">
-            <div className="flex items-center justify-between p-6 border-b">
-              <h2 className="text-xl font-semibold text-gray-800">Menu</h2>
+          <div className="fixed top-0 right-0 h-2/3 w-80 bg-white shadow-xl">
+            <div className="flex items-center justify-end pt-4">
               <button
                 onClick={toggleMobileMenu}
                 className="p-2 rounded-full hover:bg-gray-100">
@@ -137,7 +136,7 @@ const Navbar = () => {
                 </div>
               ))}
 
-              <div className="pt-6 border-t space-y-4">
+              <div className="pt-2 space-y-4">
                 <Link
                   to="#contacts"
                   onClick={toggleMobileMenu}
@@ -171,7 +170,7 @@ const MobileDropdown = ({ item, onClose }) => {
     <div>
       <button
         onClick={toggle}
-        className="flex items-center justify-between w-full text-gray-800 text-base font-medium py-2 hover:text-blue-500">
+        className="flex items-center gap-4 w-full text-gray-800 text-base font-medium py-2 hover:text-blue-500">
         <span>{item.title.replace(" ⌵", "")}</span>
         <span
           className={`transform transition-transform ${
