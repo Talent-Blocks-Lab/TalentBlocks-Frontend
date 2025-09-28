@@ -12,29 +12,35 @@ const socialLinks = [
 ];
 
 const Footer = () => {
-  const date = new Date();
-  const currentYear = date.getFullYear();
+  const currentYear = new Date().getFullYear();
 
   return (
-    <section id="contacts" className="bg-[#E8EAEC] px-4 md:px-16 lg:px-[120px] py-14">
-      <div className="flex gap-80">
-        <div className="flex-col">
-          <h4 className="text-black text-[32px] font-bold">Join With Us</h4>
+    <section
+      id="contacts"
+      className="bg-[#E8EAEC] px-4 md:px-16 lg:px-[120px] py-14"
+    >
+      {/* Newsletter */}
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-10">
+        <div>
+          <h4 className="text-black text-[28px] md:text-[32px] font-bold">
+            Join With Us
+          </h4>
           <small className="text-base font-normal">
-            We'll send you Daily special offers.
+            We'll send you daily special offers.
           </small>
         </div>
-        <div className="flex-col">
-          <input
-            type="text"
-            placeholder="Enter your email"
-            className="p-2 w-64 h-12 rounded-sm mr-5"
-          />
-          <button className="bg-primary text-white text-sm font-normal w-40 h-12 rounded-sm mb-4">
-            Join Now
-          </button>{" "}
-          <br />
-          <small className="text-black text-sm font-normal ">
+        <div>
+          <div className="flex flex-col md:flex-row md:items-center">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="p-2 w-full md:w-64 h-12 rounded-sm border border-gray-300 mr-0 md:mr-5 mb-4 md:mb-0"
+            />
+            <button className="bg-primary text-white text-sm font-normal w-full md:w-40 h-12 rounded-sm">
+              Join Now
+            </button>
+          </div>
+          <small className="text-black text-sm font-normal block mt-3">
             We care about your data. Check our{" "}
             <Link to="/privacy" className="underline underline-offset-4">
               privacy policy
@@ -42,20 +48,28 @@ const Footer = () => {
           </small>
         </div>
       </div>
-      <div className="flex items-center justify-between mt-[70px]">
+
+      {/* Footer bottom */}
+      <div className="flex flex-col md:flex-row items-center justify-between mt-[70px] gap-6">
         <Logo
           width={150}
           height={60}
           img={"/src/assets/full-logo-orange.png"}
         />
-        <p className="text-base font-normal text-[#6B6975]">
-          Copyright ©_{currentYear} TalentBlocks Lab
+        <p className="text-base font-normal text-[#6B6975] text-center">
+          Copyright © {currentYear} TalentBlocks Lab
         </p>
-        <div className="flex gap-3">
+        <div className="flex gap-4">
           {socialLinks.map((item, i) => (
-            <Link key={i} href={item.url} target="_blank">
+            <a
+              key={i}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#6B6975] hover:text-primary text-lg"
+            >
               {item.icon}
-            </Link>
+            </a>
           ))}
         </div>
       </div>
