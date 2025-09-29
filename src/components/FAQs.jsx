@@ -5,16 +5,45 @@ import { CiCirclePlus } from "react-icons/ci";
 const faqsData = [
   {
     id: "01",
-    question: "Alright, but what exactly do you do?",
+    question: "What is TalentBlocks Lab?",
     answer:
-      "As a creative agency we work with you to develop solutions to address your brand needs. That includes various aspects of brand planning and strategy, marketing and design.",
+      "TalentBlocks Lab is a grassroots-focused Web3 community platform committed to discovering, nurturing, and empowering individuals from underrepresented communities across Africa. We provide comprehensive training in both Web2 and Web3 technologies, creating sustainable pathways from curiosity to expertise to leadership.",
   },
   {
     id: "02",
-    question:
-      "I don't need a brand strategist but I need help executing an upcoming campaign. Can we still work together ?",
+    question: "What programs do you offer?",
     answer:
-      "The training is to take an absolute beginner from ground zero to a smart contract developer with the curriculum including HTML, CSS, UI/UX, Javascript, NodeJs, ReactJS and smart contract development with Solidity.",
+      "We offer physical bootcamp programs across three main tracks: Web2 Basic (foundation programming skills, HTML, CSS, JavaScript), Web2 Advanced (frameworks, backend, databases, APIs), and Web3 (blockchain development, Solidity, smart contracts, DeFi). We also provide training in non-technical skills like community management, tokenomics, product management, and Web3 marketing.",
+  },
+  {
+    id: "03",
+    question: "Do I need coding experience to join?",
+    answer:
+      "Not at all! Our Web2 Basic Track is designed for absolute beginners with no prior coding experience. We take you from ground zero through foundation programming skills. For those with existing knowledge, we offer advanced tracks in both Web2 and Web3 development.",
+  },
+  {
+    id: "04",
+    question: "Why physical bootcamps instead of online learning?",
+    answer:
+      "We believe nothing beats the immersive experience of physical bootcamps for mastering complex technical skills. Our in-person programs provide hands-on mentorship, peer collaboration, and a focused environment that accelerates learning and builds lasting community connections.",
+  },
+  {
+    id: "05",
+    question: "Are there opportunities for non-technical people?",
+    answer:
+      "Absolutely! The tech ecosystem needs diverse skills beyond coding. We offer training in digital marketing, product management, technical writing, tokenomics, Web3 community management, DeFi strategy, NFT marketing, and blockchain content creation. Everyone has a role to play in building the future.",
+  },
+  {
+    id: "06",
+    question: "How does TalentBlocks Lab support grassroots communities?",
+    answer:
+      "We actively seek talent in overlooked and underrepresented communities across Africa, ensuring everyone has access to quality tech education regardless of background. We break down barriers through inclusive learning, practical application, and by connecting local talent with global opportunities.",
+  },
+  {
+    id: "07",
+    question: "What happens after completing a bootcamp?",
+    answer:
+      "We don't just teach skills — we create pathways. After completing our programs, you join a vibrant community of learners, mentors, and builders. We help you connect with real-world projects, international opportunities, and ongoing support to transform from a learner into a builder, and from a builder into a leader.",
   },
 ];
 

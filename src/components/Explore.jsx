@@ -1,63 +1,64 @@
 import { Link } from "react-router-dom";
-import uiImage from "/assets/ui.svg"; 
+import uiImage from "/assets/ui.svg";
 
 const cardsData = [
   {
     title: "UI/UX Design Course",
     subjects: ["Figma", "Wireframing", "Prototype", "User Research", "Product"],
     description:
-      "At Talentblocks Lab, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
+      "Master user-centered design solutions for Web3 applications. Learn to create intuitive interfaces for decentralized platforms through hands-on practice and real-world projects in our immersive physical classroom environment.",
     type: "Physical class",
     duration: "8 weeks",
     btn: "Learn More",
-    route: "/ui-ux",
+    route: "/",
     img: uiImage,
   },
   {
     title: "Web2 Basics Course",
-    subjects: ["Internet","HTTP", "HTML", "CSS", "JavaScript", "Git & Github"],
+    subjects: ["Internet", "HTTP", "HTML", "CSS", "JavaScript", "Git & Github"],
     description:
-      "At Talentblocks Lab, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
+      "Build your foundation in programming with our comprehensive Web2 Basic Track. Master HTML, CSS, JavaScript, and fundamental web development concepts through structured learning and hands-on mentorship.",
     type: "Physical class",
     duration: "16 weeks",
     btn: "Learn More",
-    route: "/web2-basics",
+    route: "/",
     img: uiImage,
   },
   {
     title: "Web2 Advance Course",
     subjects: ["ReactJs", "Node.js", "Databases", "API", "TypeScript"],
     description:
-      "At Talentblocks Lab, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
+      "Take your skills to the next level with advanced frameworks, backend development, databases, APIs, and full-stack applications. Our Web2 Advanced Track prepares you for complex technical challenges.",
     type: "Physical class",
     duration: "16 weeks",
     btn: "Learn More",
-    route: "/web2-advance",
+    route: "/",
     img: uiImage,
   },
   {
-    title: "Blockchain & Solidity Course",
+    title: "Web3 (Blockchain & Solidity Course)",
     subjects: ["Solidity", "Web3 Frontend", "Hardhat", "Foundry", "IPFS"],
     description:
-      "At Talentblocks Lab, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
+      "Dive into blockchain development, Solidity programming, smart contracts, DeFi protocols, and decentralized application building. Master the technologies shaping the future of the internet.",
     type: "Physical class",
     duration: "16 weeks",
-    route: "/solidity-course",
+    route: "/",
     img: uiImage,
   },
 ];
 
 const Explore = () => {
   return (
-    <section className="flex flex-col bg-white px-8 md:px-2 xl:px-[173px] pt-[60px] pb-20 text-center">
+    <section id="explore" className="flex flex-col bg-white px-8 md:px-2 xl:px-[173px] pt-4 md:pt-[60px] pb-4 md:pb-20 text-center">
       <div className="flex flex-col items-center justify-center mb-[70px]">
         <h2 className="md:w-[655px] text-3xl lg:text-4xl text-black font-[600] mb-[16px]">
-          Explore the courses we offer
+          Explore Our Comprehensive Training Programs
         </h2>
         <p className="md:w-[576px] lg:w-[956px] text-[#555] text-center text-base">
-          Lorem ipsum dolor sit amet consectetur. Amet sociis tincidunt feugiat
-          nisl dui malesuada pulvinar convallis. Mauris ac est pretium eleifend
-          mattis bibendum sed adipiscing natoque.
+          From beginner-friendly classes to advanced projects, our structured
+          physical bootcamp programs provide hands-on mentorship, peer
+          collaboration, and the focused environment essential for mastering
+          both Web2 and Web3 skills.
         </p>
       </div>
 
@@ -68,7 +69,8 @@ const Explore = () => {
               <div
                 className={`flex text-sm sm:text-[28px] font-[500] ${
                   index === 0 || index === 3 ? "text-black" : "text-grey"
-                } justify-center items-center w-5 sm:w-[38px] h-5 sm:h-[38px] mb-1 border-solid border-[1px] border-grey`}>
+                } justify-center items-center w-5 sm:w-[38px] h-5 sm:h-[38px] mb-1 border-solid border-[1px] border-grey`}
+              >
                 {number}
               </div>
               {index < 3 && (
@@ -85,7 +87,8 @@ const Explore = () => {
           {cardsData.map((card, i) => (
             <div
               key={i}
-              className="flex flex-col md:flex-row w-full h-auto pr-4 sm:pr-0 xl:pl-6 md:gap-[32px] rounded-sm shadow border-solid opacity-[0.6] hover:opacity-[1] cursor-pointer">
+              className="flex flex-col md:flex-row w-full h-auto pr-4 sm:pr-0 xl:pl-6 md:gap-[32px] rounded-sm shadow border-solid opacity-[0.6] hover:opacity-[1] cursor-pointer"
+            >
               <div className="flex flex-col my-2 xl:my-6 sm:w-full">
                 <h3 className="text-left text-sm xl:text-3xl text-black font-[600] mb-2">
                   {card.title}
@@ -94,12 +97,17 @@ const Explore = () => {
                   {card.subjects.map((subject, idx) => (
                     <p
                       key={idx}
-                      className="px-[8px] py-[6px] bg-[#f5f5f5] font-manrope">
+                      className="px-[8px] py-[6px] bg-[#f5f5f5] font-manrope"
+                    >
                       {subject}
                     </p>
                   ))}
                 </div>
-                <img src={card.img} alt={card.title} className="w-full h-full md:hidden" />
+                <img
+                  src={card.img}
+                  alt={card.title}
+                  className="w-full h-full md:hidden"
+                />
                 <p className="text-left mb-[38px] leading-[25px]">
                   {card.description}
                 </p>
@@ -116,14 +124,16 @@ const Explore = () => {
                   <div>
                     <Link
                       to={card.route}
-                      className="w-[171px] h-[50px] rounded-sm flex bg-primary text-white items-center justify-center px-[20px] py-[12px]">
+                      className="w-[171px] h-[50px] rounded-sm flex bg-primary text-white items-center justify-center px-[20px] py-[12px]"
+                    >
                       Learn More
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
-                        fill="none">
+                        fill="none"
+                      >
                         <path
                           d="M7 17L17 7M17 7L7 7M17 7V17"
                           stroke="white"
@@ -136,7 +146,11 @@ const Explore = () => {
                   </div>
                 </div>
               </div>
-              <img src={card.img} alt={card.title} className="w-full h-full hidden md:block" />
+              <img
+                src={card.img}
+                alt={card.title}
+                className="w-full h-full hidden md:block"
+              />
             </div>
           ))}
         </div>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import React from "react";
 
 const CTAsection = () => {
   return (
@@ -8,28 +8,27 @@ const CTAsection = () => {
         {/* Left Side - Text */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6">
-            Ready to learn a Tech skill for a better Tomorrow?
+            Ready to Transform Your Future with Web3?
           </h2>
           <p className="text-sm sm:text-base md:text-lg font-normal mb-7">
-            Learn and earn a professional Tech certificate that can land you a
-            valuable job tomorrow.
+            Join our grassroots-focused bootcamps and become part of Africa's next generation of builders. From Web2 foundations to Web3 innovation, we create pathways from curiosity to expertise to leadership.
           </p>
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
-            <Link
+            <a
               className="flex items-center justify-center bg-primary border-primary border-2 rounded h-12 w-full sm:w-40 px-8 font-medium"
-              to="/register"
+              href="#explore"
             >
               Get Started
-            </Link>
+            </a>
 
-            <Link
+            <a
               className="flex items-center justify-center border-white border-2 rounded h-12 w-full sm:w-40 px-8 font-medium"
-              to="/contact"
+              href="#footer"
             >
-              Contact Us
-            </Link>
+              WhatsApp
+            </a>
           </div>
         </div>
 
