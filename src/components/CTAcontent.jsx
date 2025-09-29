@@ -10,8 +10,12 @@ const CTAcontent = () => {
         <h2 className="text-[28px] lg:text-[40px] font-[600]">
           Unleash Your Creative Potential in Our Virtual Classes
         </h2>
-{/* Image shown on mobile */}
-        <img src="/src/assets/cta.svg" alt="cta" className="sm:hidden h-[426] w-full my-3" />
+        {/* Image shown on mobile */}
+        <img
+          src="/assets/cta.svg"
+          alt="cta"
+          className="sm:hidden h-[426] w-full my-3"
+        />
 
         <p className="text-sm font-[400] leading-[24px] mb-[30px]">
           Lean and learn a professional Tech certificate that can get you
@@ -41,9 +45,12 @@ const CTAcontent = () => {
           Coming soon
         </p>
       </div>
-{/* Image shown on large devices */}
-
-      <img src="/src/assets/cta.svg" alt="cta" className="hidden h-[426] sm:block w-[272px] lg:w-[406px]" />
+      {/* Image shown on large devices */}
+      <img
+        src="/assets/cta.svg"
+        alt="cta"
+        className="hidden h-[426] sm:block w-[272px] lg:w-[406px]"
+      />
     </section>
   );
 };

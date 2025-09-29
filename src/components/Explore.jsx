@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import uiImage from "../assets/ui.svg"; // Replace require with import
+import uiImage from "/assets/ui.svg"; 
 
 const cardsData = [
   {
     title: "UI/UX Design Course",
     subjects: ["Figma", "Wireframing", "Prototype", "User Research", "Product"],
     description:
-      "At TalentBlocks Lab, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
+      "At Talentblocks Lab, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
     type: "Physical class",
     duration: "8 weeks",
     btn: "Learn More",
@@ -17,7 +17,7 @@ const cardsData = [
     title: "Web2 Basics Course",
     subjects: ["Internet","HTTP", "HTML", "CSS", "JavaScript", "Git & Github"],
     description:
-      "At TalentBlocks Lab, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
+      "At Talentblocks Lab, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
     type: "Physical class",
     duration: "16 weeks",
     btn: "Learn More",
@@ -28,7 +28,7 @@ const cardsData = [
     title: "Web2 Advance Course",
     subjects: ["ReactJs", "Node.js", "Databases", "API", "TypeScript"],
     description:
-      "At TalentBlocks Lab, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
+      "At Talentblocks Lab, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
     type: "Physical class",
     duration: "16 weeks",
     btn: "Learn More",
@@ -39,7 +39,7 @@ const cardsData = [
     title: "Blockchain & Solidity Course",
     subjects: ["Solidity", "Web3 Frontend", "Hardhat", "Foundry", "IPFS"],
     description:
-      "At TalentBlocks Lab, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
+      "At Talentblocks Lab, we recognize the power of hands-on, face-to-face learning. In the ever-evolving landscape of technology, nothing beats the immersive experience of a physical classroom.",
     type: "Physical class",
     duration: "16 weeks",
     route: "/solidity-course",

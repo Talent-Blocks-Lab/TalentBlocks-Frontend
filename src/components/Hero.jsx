@@ -3,7 +3,7 @@ import { Navbar } from "./index";
 
 const Hero = () => {
   return (
-    <header className="bg-[url('/src/assets/hero.jpg')] bg-center bg-no-repeat bg-cover">
+    <header className="bg-[url('/assets/hero.jpg')] bg-center bg-no-repeat bg-cover">
       <div className="pb-10 bg-black bg-opacity-70 flex-col justify-start gap-[162px]">
         <Navbar />
         <div className="mx-4 sm:mx-14 md:mx-16 lg:mx-[110px] pt-[162px] flex-col justify-center text-white">

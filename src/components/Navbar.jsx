@@ -47,7 +47,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="fixed z-40 bg-black bg-opacity-70 flex items-center justify-between h-[90px] mb-[162px] w-full py-[40px] px-4 md:px-2 lg:px-16 xl:px-[120px] text-white">
-        <Logo width={150} height={30} img="/src/assets/full-logo-blue.png" />
+        <Logo width={150} height={30} img="/assets/full-logo-blue.png" />
 
         {/* Menu Items */}
         <div className="flex items-center gap-[30px]">
@@ -111,7 +111,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-50 md:hidden">
-          <div className="fixed top-0 right-0 h-2/3 w-80 bg-white shadow-xl">
+          <div className="fixed top-0 right-0 w-80 bg-white shadow-xl">
             <div className="flex items-center justify-end pt-4">
               <button
                 onClick={toggleMobileMenu}
