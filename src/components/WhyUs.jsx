@@ -1,7 +1,7 @@
 import { FiPocket, FiSliders, FiGlobe } from "react-icons/fi";
-import bline from "../assets/bline.svg";
-import gline from "../assets/gline.svg";
-import oline from "../assets/oline.svg";
+import bline from "/assets/bline.svg";
+import gline from "/assets/gline.svg";
+import oline from "/assets/oline.svg";
 
 const cardsData = [
   {

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import quoteIcon from "../assets/quote-left.svg";
+import quoteIcon from "/assets/quote-left.svg";
 
 const Feedbacks = () => {
   const [index, setIndex] = useState(0);
@@ -13,6 +13,7 @@ const Feedbacks = () => {
       setFeedbacks(data);
     } catch (error) {
       console.error("Error fetching feedbacks:", error);
+      setFeedbacks([]);
     }
   };
 

@@ -54,7 +54,7 @@ const Footer = () => {
         <Logo
           width={150}
           height={60}
-          img={"/src/assets/full-logo-orange.png"}
+          img={"/assets/full-logo-orange.png"}
         />
         <p className="text-base font-normal text-[#6B6975] text-center">
           Copyright © {currentYear} TalentBlocks Lab

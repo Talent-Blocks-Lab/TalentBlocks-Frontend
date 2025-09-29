@@ -35,7 +35,7 @@ const CTAsection = () => {
 
         {/* Right Side - Image */}
         <img
-          src="/src/assets/CTAsection.png"
+          src="/assets/CTAsection.png"
           alt="CTA"
           className="w-full max-w-[400px] h-auto object-contain"
         />
