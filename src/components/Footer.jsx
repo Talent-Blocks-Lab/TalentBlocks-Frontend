@@ -8,7 +8,7 @@ const socialLinks = [
   { icon: <FaLinkedinIn />, url: "https://linkedin.com" },
   { icon: <RiInstagramFill />, url: "https://instagram.com" },
   { icon: <FaFacebookF />, url: "https://facebook.com" },
-  { icon: <FaTwitter />, url: "https://x.com" },
+  { icon: <FaTwitter />, url: "https://x.com/talentblockslab" },
 ];
 
 const Footer = () => {
@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
           <small className="text-black text-sm font-normal block mt-3">
             We care about your data. Check our{" "}
-            <Link to="/privacy" className="underline underline-offset-4">
+            <Link to="/" className="underline underline-offset-4">
               privacy policy
             </Link>
           </small>

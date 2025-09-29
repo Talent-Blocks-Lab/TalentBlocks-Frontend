@@ -45,6 +45,12 @@ const faqsData = [
     answer:
       "We don't just teach skills — we create pathways. After completing our programs, you join a vibrant community of learners, mentors, and builders. We help you connect with real-world projects, international opportunities, and ongoing support to transform from a learner into a builder, and from a builder into a leader.",
   },
+  {
+    id: "08",
+    question: "Where is the bootcamp located?",
+    answer:
+      "Our physical bootcamp is currently located in Ibadan, Oyo State, Nigeria. While we plan to expand to more African countries in the future, individuals from other African countries are welcome to join us at our current location. We're building a pan-African community, and we encourage talents from across the continent to be part of this movement.",
+  },
 ];
 
 // Faq Item
