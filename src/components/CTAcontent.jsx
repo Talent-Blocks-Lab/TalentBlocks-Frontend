@@ -2,13 +2,13 @@ import { HiCheckCircle } from "react-icons/hi";
 
 const CTAcontent = () => {
   return (
-    <section className="flex flex-col sm:flex-row py-[70px] lg:px-[80px] xl:px-[120px] gap-[40px] bg-primary">
+    <section id="non-technical" className="flex flex-col sm:flex-row py-6 md:py-[70px] lg:px-[80px] xl:px-[120px] gap-[40px] bg-primary">
       <div className="flex-col text-white ml-7 mr-7 md:ml-[60px] xl:ml-[100px]">
-        <p className="w-[88px] h-[22px] text-xs text-center flex justify-center items-center bg-white text-primary rounded-xl px-[8px]">
-          Online Class
+        <p className="w-[120px] h-[22px] text-xs text-center flex justify-center items-center bg-white text-primary rounded-xl px-[8px]">
+          Online Learning
         </p>
         <h2 className="text-[28px] lg:text-[40px] font-[600]">
-          Unleash Your Creative Potential in Our Virtual Classes
+          Master Essential Non-Technical Skills for the Tech Ecosystem
         </h2>
         {/* Image shown on mobile */}
         <img
@@ -18,8 +18,9 @@ const CTAcontent = () => {
         />
 
         <p className="text-sm font-[400] leading-[24px] mb-[30px]">
-          Lean and learn a professional Tech certificate that can get you
-          valuable job tomorrow.
+          Develop the diverse skills beyond coding that drive success in Web2
+          and Web3. From digital marketing to tokenomics, build expertise that
+          complements technical knowledge and opens new career pathways.
         </p>
         <div className="flex flex-col sm:flex-row sm:gap-[12px] text-base lg:text-sm font-[400] mb-1">
           <div className="flex sm:justify-center items-center">

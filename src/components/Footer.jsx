@@ -16,17 +16,17 @@ const Footer = () => {
 
   return (
     <section
-      id="contacts"
-      className="bg-[#E8EAEC] px-4 md:px-16 lg:px-[120px] py-14"
+      id="footer"
+      className="bg-[#E8EAEC] px-4 md:px-16 lg:px-[120px] py-4 md:py-14"
     >
       {/* Newsletter */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-10">
         <div>
           <h4 className="text-black text-[28px] md:text-[32px] font-bold">
-            Join With Us
+            Join Our Community
           </h4>
           <small className="text-base font-normal">
-            We'll send you daily special offers.
+            Stay updated with bootcamp schedules, learning resources, and opportunities.
           </small>
         </div>
         <div>

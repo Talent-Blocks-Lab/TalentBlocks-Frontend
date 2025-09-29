@@ -51,7 +51,7 @@ const Feedbacks = () => {
         color: current?.textColor || "#1c1c1c",
       }}
     >
-      {/* Large Quote Icon */}
+      {/* Quote Icon */}
       <div className="absolute -top-8 -left-4 select-none pointer-events-none">
         <img
           src={quoteIcon}
@@ -60,7 +60,7 @@ const Feedbacks = () => {
         />
       </div>
 
-      {/* Avatar + Nav */}
+      {/* Avatar + Navigations */}
       <div className="flex justify-center items-center gap-16 mb-7">
         <button onClick={prevTestimonialHandler} className="hover:scale-110 transition">
           <FaArrowLeft />

@@ -7,34 +7,36 @@ const menuItems = [
   {
     title: "About Us",
     route: "#about-us",
+    isHash: true,
   },
   {
     title: "Programs ⌵",
     children: [
       {
         title: "UI/UX Design Course",
-        route: "/product-design",
+        route: "/",
       },
       {
         title: "Web2 Basics Course",
-        route: "/web2-basics",
+        route: "/",
       },
       {
         title: "Web2 Advance Course",
-        route: "/web2-advance",
+        route: "/",
       },
       {
-        title: "Blockchain & Solidity Course",
-        route: "/solidity-course",
+        title: "Web3 (Blockchain & Solidity Course)",
+        route: "/",
       },
       {
         title: "Non-Technical Programs (online)",
-        route: "/non-technical",
+        route: "#non-technical",
+        isHash: true,
       },
     ],
   },
-  { title: "FAQs", route: "#faqs" },
-  { title: "Blogs", route: "/blogs" },
+  { title: "FAQs", route: "#faqs", isHash: true },
+  { title: "Blogs", route: "/" },
 ];
 
 const Navbar = () => {
@@ -42,6 +44,22 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleHashClick = (e, route) => {
+    e.preventDefault();
+    const element = document.querySelector(route);
+    if (element) {
+      const navbarHeight = 90;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      setIsMobileMenuOpen(false);
+    }
   };
 
   return (
@@ -53,21 +71,28 @@ const Navbar = () => {
         <div className="flex items-center gap-[30px]">
           {menuItems.map((item, index) => {
             if (item.children) {
-              // Programs dropdown - show on md and up
               return (
                 <div key={index} className="hidden md:block">
-                  <Dropdown item={item} />
+                  <Dropdown item={item} handleHashClick={handleHashClick} />
                 </div>
               );
             } else {
-              // Other menu items - show only on md and up
               return (
                 <div key={index} className="hidden md:block">
-                  <Link
-                    to={item.route || ""}
-                    className="text-white text-base font-[500] leading-relaxed">
-                    {item.title}
-                  </Link>
+                  {item.isHash ? (
+                    <a
+                      href={item.route}
+                      onClick={(e) => handleHashClick(e, item.route)}
+                      className="text-white text-base font-[500] leading-relaxed cursor-pointer">
+                      {item.title}
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.route || ""}
+                      className="text-white text-base font-[500] leading-relaxed">
+                      {item.title}
+                    </Link>
+                  )}
                 </div>
               );
             }
@@ -76,24 +101,26 @@ const Navbar = () => {
 
         {/* Right Section */}
         <div className="flex items-center gap-2 lg:gap-[15px] xl:gap-[30px]">
-          {/* Programs dropdown for md and below - positioned close to menu button */}
+          {/* Programs dropdown for md and below */}
           <div className="hidden sm:inline-flex md:hidden">
-            <Dropdown item={menuItems.find((item) => item.children)} />
+            <Dropdown item={menuItems.find((item) => item.children)} handleHashClick={handleHashClick} />
           </div>
 
           {/* Contacts - xl and up only */}
-          <Link
-            className="hidden md:block text-white text-base font-medium leading-none"
-            to="#contacts">
+          <a
+            className="hidden md:block text-white text-base font-medium leading-none cursor-pointer"
+            href="#footer"
+            onClick={(e) => handleHashClick(e, '#footer')}>
             Contacts
-          </Link>
+          </a>
 
           {/* Get Started - sm and up */}
-          <Link
-            className="hidden sm:inline-flex w-[120px] xl:w-[164px] h-[40px] xl:h-[50px] text-base px-4 xl:px-8 py-2 xl:py-4 bg-blue-500 rounded justify-center items-center"
-            to="/available-courses">
+          <a
+            className="hidden sm:inline-flex w-[120px] xl:w-[164px] h-[40px] xl:h-[50px] text-base px-4 xl:px-8 py-2 xl:py-4 bg-blue-500 rounded justify-center items-center cursor-pointer"
+            href="#explore"
+            onClick={(e) => handleHashClick(e, '#explore')}>
             Get Started
-          </Link>
+          </a>
 
           {/* Mobile Menu Button - md and below */}
           <button
@@ -124,7 +151,14 @@ const Navbar = () => {
               {menuItems.map((item, index) => (
                 <div key={index}>
                   {item.children ? (
-                    <MobileDropdown item={item} onClose={toggleMobileMenu} />
+                    <MobileDropdown item={item} onClose={toggleMobileMenu} handleHashClick={handleHashClick} />
+                  ) : item.isHash ? (
+                    <a
+                      href={item.route}
+                      onClick={(e) => handleHashClick(e, item.route)}
+                      className="block text-gray-800 text-base font-medium py-2 hover:text-blue-500 cursor-pointer">
+                      {item.title}
+                    </a>
                   ) : (
                     <Link
                       to={item.route || ""}
@@ -137,18 +171,18 @@ const Navbar = () => {
               ))}
 
               <div className="pt-2 space-y-4">
-                <Link
-                  to="#contacts"
-                  onClick={toggleMobileMenu}
-                  className="block text-gray-800 text-base font-medium py-2 hover:text-blue-500">
+                <a
+                  href="#footer"
+                  onClick={(e) => handleHashClick(e, '#footer')}
+                  className="block text-gray-800 text-base font-medium py-2 hover:text-blue-500 cursor-pointer">
                   Contacts
-                </Link>
-                <Link
-                  to="/available-courses"
-                  onClick={toggleMobileMenu}
-                  className="block w-full text-center px-6 py-3 bg-blue-500 text-white rounded font-medium hover:bg-blue-600">
+                </a>
+                <a
+                  href="#explore"
+                  onClick={(e) => handleHashClick(e, '#explore')}
+                  className="block w-full text-center px-6 py-3 bg-blue-500 text-white rounded font-medium hover:bg-blue-600 cursor-pointer">
                   Get started
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -158,7 +192,7 @@ const Navbar = () => {
   );
 };
 
-const MobileDropdown = ({ item, onClose }) => {
+const MobileDropdown = ({ item, onClose, handleHashClick }) => {
   const [isOpen, setIsOpen] = useState(false);
   const menuItems = item?.children || [];
 
@@ -183,13 +217,26 @@ const MobileDropdown = ({ item, onClose }) => {
       {isOpen && (
         <div className="ml-4 mt-2 space-y-2">
           {menuItems.map((childItem) => (
-            <Link
-              key={childItem.route}
-              to={childItem?.route || ""}
-              onClick={onClose}
-              className="block text-gray-600 text-sm font-medium py-2 hover:text-blue-500">
-              {childItem.title}
-            </Link>
+            childItem.isHash ? (
+              <a
+                key={childItem.route}
+                href={childItem.route}
+                onClick={(e) => {
+                  handleHashClick(e, childItem.route);
+                  onClose();
+                }}
+                className="block text-gray-600 text-sm font-medium py-2 hover:text-blue-500 cursor-pointer">
+                {childItem.title}
+              </a>
+            ) : (
+              <Link
+                key={childItem.route}
+                to={childItem?.route || ""}
+                onClick={onClose}
+                className="block text-gray-600 text-sm font-medium py-2 hover:text-blue-500">
+                {childItem.title}
+              </Link>
+            )
           ))}
         </div>
       )}
